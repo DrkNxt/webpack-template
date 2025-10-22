@@ -1,10 +1,27 @@
 # webpack-template
 
-## Change `insert-name-here` in `package.json` and `package-lock.json` to repo name
+## Do immediatly
 
-`npm install`
+Change `insert-name-here` in `package.json` and `package-lock.json` to repo name
 
-`npm run dev` to start dev server (close with `Ctrl+c`)
+Run `npm install` to install all dependencies
 
-`npm run build` to make distribution build
+## Dev Server
 
+`npm run dev` to start dev server
+
+`Ctrl+C` to close dev server
+
+## Deployment
+
+If this is the first deployment: `git branch gh-pages`
+
+Do the following in order for every deployment:
+
+1. Commit all edits
+2. `git checkout gh-pages && git merge main --no-edit`
+3. `npm run build`
+4. `git add dist -f && git commit -m "Deployment commit"`
+5. `git subtree push --prefix dist origin gh-pages`
+6. `git checkout main`
+7. Set GitHub Pages source branch to `gh-pages`
