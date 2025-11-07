@@ -1,6 +1,6 @@
 # webpack-template
 
-## Do immediatly
+## Do immediately
 
 Change `insert-name-here` in `package.json` and `package-lock.json` to repo name
 
@@ -22,6 +22,14 @@ Do the following in order for every deployment:
 2. `git checkout gh-pages && git merge main --no-edit`
 3. `npm run build`
 4. `git add dist -f && git commit -m "Deployment commit"`
-5. `git subtree push --prefix dist origin gh-pages`
+5. `npm run deploy`
 6. `git checkout main`
 7. Set GitHub Pages source branch to `gh-pages`
+
+## Testing
+
+Create tests in `./src/__tests__/` folder with `.test.js` extension
+
+`npm run test` to run tests once
+
+`npm run watch` to run tests in watch mode (re-runs tests on file changes)
